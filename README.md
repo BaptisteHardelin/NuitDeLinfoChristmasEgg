@@ -1,3 +1,6 @@
 # Le défi: Christmas egg
 
-défis réalisé par Baptiste Hardelin
+défis réalisés par Baptiste Hardelin et Jules De Witte
+
+Baptiste Hardelin -> développement
+Jules De Witte -> Image

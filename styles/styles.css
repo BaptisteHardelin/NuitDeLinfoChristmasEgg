@@ -5,11 +5,11 @@
     margin: auto;
 }
 
-#dino {
+#rescueBoat {
     width: 50px;
     height: 50px;
     background-color: black;
-    background-image: url(../img/trex.png);
+    background-image: url(../img/RescueBoat.png);
     background-size: 50px 50px;
     position: relative;
     top: 150px;
@@ -38,5 +38,32 @@
 
     100% {
         top: 150px;
+    }
+}
+
+
+#brokenBoat {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+
+    background-image: url("../img/BrokenBoat.png");
+    background-size: 20px 40px;
+    animation: block 1s infinite linear;
+}
+
+.block {
+    animation: block 1s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20px;
     }
 }
