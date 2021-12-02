@@ -51,10 +51,24 @@
 
     background-image: url("../img/BrokenBoat.png");
     background-size: 20px 40px;
-    animation: block 1s infinite linear;
 }
 
-.block {
+#rock{
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 70px;
+    left: 580px;
+
+    background-image: url("../img/rock.png");
+    background-size: 20px 40px;
+}
+
+.rockAnim {
+    animation: block 1s infinite linear; 
+}
+
+.brokenBoatAnim {
     animation: block 1s infinite linear;
 }
 
@@ -66,4 +80,9 @@
     100% {
         left: -20px;
     }
+}
+
+#restartDiv {
+    width: 10%;
+    margin:0 auto;
 }
