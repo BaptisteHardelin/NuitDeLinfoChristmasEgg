@@ -1,10 +1,12 @@
 # Le défi: Christmas egg
 
-défis réalisés par Baptiste Hardelin et Jules De Witte
+défi réalisés par Baptiste Hardelin et Jules De Witte
 
-Baptiste Hardelin -> développement
+Baptiste Hardelin -> développement <br />
 Jules De Witte -> Image
 
 
 # Pour accèder à l'Easter egg
 Aller sur le site http://sauveteur-de-dunkerque.alwaysdata.net/ puis cliquer sur le logo en haut à gauche lien de la vidéo de présentation :
+
+<a href="noticeDeDeclanchement.mkv">video</a>
