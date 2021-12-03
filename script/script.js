@@ -15,6 +15,13 @@ let boutonEnvoyer = document.getElementById('restart');
 let para = document.createElement('p');
 /** @type {boolean} On regarde si on a perdu (par défaut à false)*/
 let gameOver = false;
+let gameWidth = 600;
+
+let demoCalc = window.getComputedStyle(rock).getPropertyValue('left');
+console.log(demoCalc);
+var pixelsX = (parseFloat(demoCalc) / 100 * rock.offsetWidth) + 'px';
+var pixelsY = (parseFloat(demoCalc) / 100 * rock.offsetHeight) + 'px';
+console.log(pixelsX);
 
 
 /**
@@ -35,13 +42,7 @@ function jump(event) {
     }
 }
 
-let styleLeftRock = rock.style.left;
-let styleLeftGame = rock.style.left;
-if(styleLeftRock > styleLeftGame) {
-    rock.style.display = 'none';
-} else {
-    rock.style.display = 'block';
-}
+
 
 
 /**

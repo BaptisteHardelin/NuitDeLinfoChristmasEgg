@@ -10,6 +10,7 @@
     height: 7px;
     background-image: url('../img/water.png');
     position: absolute;
+    visibility: visible;
     top: 203px;
 }
 
