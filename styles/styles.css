@@ -16,37 +16,41 @@
 }
 
 .jump {
-    animation: jump 0.3s linear;
+    animation: jump 1s linear;
 }
 
 @keyframes jump {
     0% {
-        top: 150px;
+        top: 50px;
     }
 
     30% {
-        top: 130px;
+        top: 60px;
     }
 
     50% {
-        top: 80px;
+        top: 70px;
+    }
+
+    60% {
+        top: 75px;
     }
 
     80% {
-        top: 130px;
+        top: 80px;
     }
 
     100% {
-        top: 150px;
+        top: 100px;
     }
 }
 
 
 #brokenBoat {
     width: 20px;
-    height: 40px;
+    height: 21px;
     position: relative;
-    top: 110px;
+    top: 129px;
     left: 580px;
 
     background-image: url("../img/BrokenBoat.png");
@@ -57,24 +61,34 @@
     width: 20px;
     height: 40px;
     position: relative;
-    top: 70px;
+    top: 90px;
     left: 580px;
 
     background-image: url("../img/rock.png");
     background-size: 20px 40px;
 }
 
-.rockAnim {
-    animation: block 1s infinite linear; 
-}
-
 .brokenBoatAnim {
-    animation: block 1s infinite linear;
+    animation: blockBoat 4s infinite linear;
 }
 
-@keyframes block {
+.rockAnim {
+    animation: blockRock 5s infinite linear; 
+}
+
+@keyframes blockBoat {
     0% {
-        left: 580px;
+        left: 600px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}
+
+@keyframes blockRock {
+    0% {
+        left: 750px;
     }
 
     100% {

@@ -20,19 +20,34 @@ function jump(event) {
 }
 
 
-function addBlock(element) {
-    brokenBoat.classList.add(element);
+function addBlockBrokenBoat() {
+    brokenBoat.classList.add('brokenBoatAnim');
 }
 
-function block(element) {
-    brokenBoat.classList.remove(element);
+function blockBrokenBoat() {
+    brokenBoat.classList.remove('brokenBoatAnim');
 }
 
-addBlock();
+function addBlockRock() {
+    rock.classList.add('rockAnim');
+}
 
-function fGameOver(element) {
+function blockBrokenRock() {
+    rock.classList.remove('rockAnim');
+}
+
+addBlockBrokenBoat();
+addBlockRock()
+
+function fGameOverBrokenBoat() {
     gameOver = true;
-    block(element);
+    blockBrokenBoat();
+    para.textContent = 'Vous avez perdu !';
+}
+
+function fGameOverRock() {
+    gameOver = true;
+    blockBrokenRock();
     para.textContent = 'Vous avez perdu !';
 }
 
@@ -46,12 +61,15 @@ let isAlive = setInterval(function() {
     // On regarde si les 2 se touchent
     if(brokenBoatLeft < 50 && brokenBoatLeft < 0 && boatTop >= 140) {
         // On arrête l'animation du bateau
-        fGameOver('brokenBoatAnim');
+        fGameOverBrokenBoat();
+        fGameOverRock();
     }
 
     if(rockLeft < 50 && rockLeft < 0 && boatTop >= 140) {
-        fGameOver('rockAnim');
+        fGameOverRock();
+        fGameOverBrokenBoat();
     }
+
 }, 10);
 
 document.addEventListener('keydown', function(event) {
@@ -60,8 +78,8 @@ document.addEventListener('keydown', function(event) {
 
 boutonEnvoyer.addEventListener('click', function() {
     if(restartCheck.value == 'oui') {
-        addBlock('brokenBoatAnim');
-        //addBlock('rockAnim');
+        addBlockBrokenBoat();
+        addBlockRock();
         para.textContent = '';
     }
 });
