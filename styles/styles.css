@@ -5,11 +5,19 @@
     margin: auto;
 }
 
+#bck {
+    width: 600px;
+    height: 7px;
+    background-image: url('../img/water.png');
+    position: absolute;
+    top: 203px;
+}
+
 #rescueBoat {
     width: 50px;
     height: 50px;
     background-color: black;
-    background-image: url(../img/RescueBoat.png);
+    background-image: url('../img/RescueBoat.png');
     background-size: 50px 50px;
     position: relative;
     top: 150px;
@@ -40,6 +48,10 @@
         top: 80px;
     }
 
+    90% {
+        top: 90px;
+    }
+
     100% {
         top: 100px;
     }
@@ -50,9 +62,8 @@
     width: 20px;
     height: 21px;
     position: relative;
-    top: 129px;
+    top: 127px;
     left: 580px;
-
     background-image: url("../img/BrokenBoat.png");
     background-size: 20px 40px;
 }

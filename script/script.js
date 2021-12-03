@@ -14,7 +14,7 @@ function jump(event) {
             rescueBoat.classList.add('jump');
             setTimeout(function() {
                 rescueBoat.classList.remove('jump');
-            }, 300);
+            }, 1000);
         }
     }
 }
@@ -53,6 +53,8 @@ function fGameOverRock() {
 
 let isAlive = setInterval(function() {
     // On la position courante du boat en Y
+    let rescueBoatWidth = rescueBoat.style.width;
+    let rescueBoatHeight = rescueBoat.style.height;
     let boatTop = parseInt(window.getComputedStyle(rescueBoat).getPropertyValue('top'));
     // On la position courante du rescueBoat en X
     let brokenBoatLeft = parseInt(window.getComputedStyle(brokenBoat).getPropertyValue('left'));
