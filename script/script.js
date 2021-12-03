@@ -1,6 +1,7 @@
 const rescueBoat = document.getElementById('rescueBoat');
 const brokenBoat = document.getElementById('brokenBoat');
 const rock = document.getElementById('rock');
+const game = document.getElementsByClassName('.game');
 let restartCheck = document.getElementById('restartCheck');
 let boutonEnvoyer = document.getElementById('restart');
 let para = document.createElement('p');
@@ -17,6 +18,14 @@ function jump(event) {
             }, 1000);
         }
     }
+}
+
+let styleLeftRock = rock.style.left;
+let styleLeftGame = rock.style.left;
+if(styleLeftRock > styleLeftGame) {
+    rock.style.display = 'none';
+} else {
+    rock.style.display = 'block';
 }
 
 
@@ -53,8 +62,6 @@ function fGameOverRock() {
 
 let isAlive = setInterval(function() {
     // On la position courante du boat en Y
-    let rescueBoatWidth = rescueBoat.style.width;
-    let rescueBoatHeight = rescueBoat.style.height;
     let boatTop = parseInt(window.getComputedStyle(rescueBoat).getPropertyValue('top'));
     // On la position courante du rescueBoat en X
     let brokenBoatLeft = parseInt(window.getComputedStyle(brokenBoat).getPropertyValue('left'));
@@ -85,6 +92,5 @@ boutonEnvoyer.addEventListener('click', function() {
         para.textContent = '';
     }
 });
-
 
 document.body.appendChild(para);
